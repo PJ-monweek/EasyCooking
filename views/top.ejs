@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta http-equiv="X-UA-compatible" content="ie = edge , chrome = 1">
+    <link href="stylesheets/navbar.css" rel="stylesheet" />
+    <link href="stylesheets/webdefault.css" rel="stylesheet" />    
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title> Easy Cooking </title>
+</head>
+<body>
+    <nav>
+		<div class="wrapper">
+		  <div class="logo"><a href="/">EasyCooking | </a></div>
+		  <input type="radio" name="slider" id="menu-btn">
+		  <input type="radio" name="slider" id="close-btn">
+		  <ul class="nav-links">
+			<label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+			<li><a href="/" >หน้าหลัก</a></li>
+			<li>
+			  <a href="#" class="desktop-item">ค้นหาเมนูอาหาร</a>
+			  <input type="checkbox" id="showDrop">
+			  <label for="showDrop" class="mobile-item">ค้นหาเมนูอาหาร</label>
+			  <ul class="drop-menu">
+				<li><a href="thaimenu">อาหารไทย</a></li>
+				<li><a href="chinesemenu">อาหารจีน</a></li>
+				<li><a href="westernmenu">อาหารตะวันตก</a></li>
+                <li><a href="koreanmenu">อาหารเกาหลี</a></li>	
+                <li><a href="dessert">อาหารหวาน</a></li>
+              </ul>
+              <li><a href="contact">ติดต่อพวกเรา</a></li>
+			</li>
+		  </ul>
+		  <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+		</div>
+	  </nav>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <%- include top.ejs %>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-compatible" content="ie = edge , chrome = 1" />
+    <link href="stylesheets/webdefault.css" rel="stylesheet" />
+    <link href="stylesheets/menu.css" rel="stylesheet" />
+    <link href="stylesheets/filtermenu.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>Easy Cooking</title>
+
+    <script>
+      window.console = window.console || function (t) {};
+    </script>
+
+    <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
+  </head>
+  <body translate="no">
+    <div id="centerwrap">
+      <div class="header">
+        <br /><br />
+        <p
+          class="shadow"
+          style="color: #97f4c7; text-align: center; font-size: 50px"
+        >
+          <br />เมนูอาหารหวานไทย
+        </p>
+        <p
+          class="shadow"
+          style="color: orange; text-align: center; font-size: 25px"
+        >
+          โปรดเลือกวัตถุดิบ
+        </p>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <div class="button-area filters">
+        <p style="color: rgb(32, 31, 29); font-size: 20px">ส่วนผสม</p>
+        <label class="button">
+          <input type="checkbox" value="แป้งข้าวเหนียว" />แป้งข้าวเหนียว
+        </label>
+        <label class="button">
+          <input type="checkbox" value="แป้งข้าวเจ้า" />แป้งข้าวเจ้า
+        </label>
+        <label class="button">
+          <input type="checkbox" value="แป้งมันสำปะหลัง" />แป้งมันสำปะหลัง
+        </label>
+        <label class="button">
+          <input type="checkbox" value="แป้งถั่วเขียว" />แป้งถั่วเขียว
+        </label>
+        <label class="button">
+          <input type="checkbox" value="น้ำเปล่า" />น้ำเปล่า
+        </label>
+        <label class="button">
+          <input type="checkbox" value="น้ำแข็ง" />น้ำแข็ง
+        </label>
+        <label class="button">
+          <input type="checkbox" value="น้ำกะทิ" />น้ำกะทิ
+        </label>
+        <label class="button">
+          <input type="checkbox" value="น้ำตาลทราย" />น้ำตาลทราย
+        </label>
+        <label class="button">
+          <input type="checkbox" value="น้ำตาลปี๊บ" />น้ำตาลปี๊บ
+        </label>
+        <label class="button">
+          <input type="checkbox" value="เกลือ" />เกลือ
+        </label>
+        <label class="button">
+          <input type="checkbox" value="ไข่ไก่" />ไข่ไก่
+        </label>
+        <label class="button">
+          <input type="checkbox" value="ไข่เป็ด" />ไข่เป็ด
+        </label>
+        <label class="button">
+          <input type="checkbox" value="หัวกะทิ" />หัวกะทิ
+        </label>
+        <label class="button">
+          <input type="checkbox" value="น้ำแดงเฮลบลูบอย" />น้ำแดงเฮลบลูบอย
+        </label>
+        <label class="button">
+          <input type="checkbox" value="เเป้งมัน" />เเป้งมัน
+        </label>
+        <label class="button">
+          <input type="checkbox" value="น้ำตาลแว่น" />น้ำตาลแว่น
+        </label>
+        <label class="button">
+          <input type="checkbox" value="น้ำปูนใส" />น้ำปูนใส
+        </label>
+        <label class="button">
+          <input type="checkbox" value="น้ำใบเตย" />น้ำใบเตย
+        </label>
+        <label class="button">
+          <input type="checkbox" value="น้ำหอมกลิ่นมะลิ" />น้ำหอมกลิ่นมะลิ
+        </label>
+
+        <br />
+        <p style="color: rgb(32, 31, 29); font-size: 20px">ตกเเต่ง</p>
+        <label class="button">
+          <input type="checkbox" value="สีผสมอาหาร" />สีผสมอาหาร
+        </label>
+
+        <br />
+        <p style="color: rgb(32, 31, 29); font-size: 20px">ผัก-ผลไม้</p>
+        <label class="button">
+          <input type="checkbox" value="ฟักทอง" />ฟักทอง
+        </label>
+        <label class="button">
+          <input type="checkbox" value="ใบเตย" />ใบเตย
+        </label>
+        <label class="button">
+          <input type="checkbox" value="เเห้วไทย" />เเห้วไทย
+        </label>
+        <label class="button">
+          <input type="checkbox" value="เนื้อมะพร้าว" />เนื้อมะพร้าว
+        </label>
+        <label class="button">
+          <input type="checkbox" value="เผือก" />เผือก
+        </label>
+      </div>
+      <br />
+      <hr />
+      <br />
+
+      <div class="menudiv">
+        <div class="wrapper1" id="mnsry_container">
+          <div
+            class="card item แป้งข้าวเหนียว น้ำเปล่า เผือก ฟักทอง น้ำใบเตย  สีผสมอาหาร น้ำตาลทราย น้ำกะทิ น้ำตาลทราย เกลือ ไข่ไก่"
+          >
+            <img src="images/d_menu/d_บัวลอยไข่หวาน_2.jpg" alt="" />
+            <div class="content">
+              <div class="row">
+                <div class="details">
+                  <span>บัวลอยไข่หวาน</span>
+                </div>
+                <div class="default"></div>
+                <div class="buttons">
+                  <button onclick="window.location.href='d_bualoy'">
+                    ดูเพิ่มเติม
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card item ฟักทอง หัวกะทิ น้ำตาลปี๊บ ไข่ไก่ ไข่เป็ด ใบเตย เกลือ ใบเตย"
+          >
+            <img src="images/d_menu/d_สังขยาฟักทอง_3.jpg" alt="" />
+            <div class="content">
+              <div class="row">
+                <div class="details">
+                  <span>สังขยาฟักทอง</span>
+                </div>
+                <div class="default"></div>
+                <div class="buttons">
+                  <button onclick="window.location.href='d_pumpkincustard'">
+                    ดูเพิ่มเติม
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card item เเห้วไทย น้ำแดงเฮลบลูบอย น้ำกะทิ น้ำตาลทราย เกลือ น้ำเปล่า ใบเตย เเป้งมัน"
+          >
+            <img src="images/d_menu/d_ทับทิมกรอบ_2.jpg" alt="" />
+            <div class="content">
+              <div class="row">
+                <div class="details">
+                  <span>ทับทิมกรอบ</span>
+                </div>
+                <div class="default"></div>
+                <div class="buttons">
+                  <button onclick="window.location.href='d_tubtimkrob'">
+                    ดูเพิ่มเติม
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card item แป้งข้าวเหนียว น้ำตาลแว่น เนื้อมะพร้าว เผือก เกลือ น้ำแดงเฮลบลูบอย"
+          >
+            <img src="images/d_menu/d_ขนมโค_1.jpg" alt="" />
+            <div class="content">
+              <div class="row">
+                <div class="details">
+                  <span>ขนมโค</span>
+                </div>
+                <div class="default"></div>
+                <div class="buttons">
+                  <button onclick="window.location.href='d_khanomkho'">
+                    ดูเพิ่มเติม
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card item ใบเตย น้ำปูนใส แป้งข้าวเจ้า แป้งมันสำปะหลัง แป้งถั่วเขียว น้ำเปล่า น้ำแข็ง หัวกะทิ น้ำตาลปี๊บ เกลือ"
+          >
+            <img src="images/d_menu/d_ลอดช่องน้ำกะทิ_1.jpg" alt="" />
+            <div class="content">
+              <div class="row">
+                <div class="details">
+                  <span>ลอดช่องน้ำกะทิ</span>
+                </div>
+                <div class="default"></div>
+                <div class="buttons">
+                  <button onclick="window.location.href='d_lodchong'">
+                    ดูเพิ่มเติม
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card item น้ำตาลทราย หัวกะทิ แป้งข้าวเจ้า แป้งมันสำปะหลัง แป้งถั่วเขียว น้ำใบเตย น้ำหอมกลิ่นมะลิ"
+          >
+            <img src="images/d_menu/d_ขนมชั้นใบเตย_1.jpg" alt="" />
+            <div class="content">
+              <div class="row">
+                <div class="details">
+                  <span>ขนมชั้นใบเตย</span>
+                </div>
+                <div class="default"></div>
+                <div class="buttons">
+                  <button onclick="window.location.href='d_kanomchan'">
+                    ดูเพิ่มเติม
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- โค้ดตรงนี้จำเป็นในfilltherมากห้ามย้ายเด็ดขาด -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/desandro/masonry/master/dist/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.rawgit.com/digistate/resouces/master/multipleFilterMasonry.js"></script>
+
+    <script>
+      var mContainer = $("#mnsry_container"),
+        filterButton = $(".button");
+      params = {
+        itemSelector: ".item",
+        filtersGroupSelector: ".filters",
+      };
+
+      $(window).load(function () {
+        // Do mansonry with filtering
+        mContainer.multipleFilterMasonry(params);
+
+        // Show articles with fadein
+        mContainer.find(".item").animate({ opacity: 1 }, 1200);
+
+        // Change the filtering button(label) status
+        filterButton.find("input").change(function () {
+          $(this).parent().toggleClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

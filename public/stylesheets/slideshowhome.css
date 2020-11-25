@@ -1,0 +1,20 @@
+/*Slide Show*/
+.slide_show {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .slide_show img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: 3s;
+    opacity: 0;
+  }
+  
+  .slide_show img.select {
+    opacity: 1;
+  }

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+  <%- include top.ejs %>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-compatible" content="ie = edge , chrome = 1" />
+    <link href="stylesheets/webdefault.css" rel="stylesheet" />
+    <link href="stylesheets/menu.css" rel="stylesheet" />
+    <link href="stylesheets/filtermenu.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>Easy Cooking</title>
+
+    <script>
+      window.console = window.console || function (t) {};
+    </script>
+
+    <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
+  </head>
+  <body translate="no">
+    <div id="centerwrap">
+      <div class="header">
+        <br /><br />
+        <p
+          class="shadow"
+          style="color: #97f4c7; text-align: center; font-size: 50px"
+        >
+          <br />เมนูอาหารตะวันตก
+        </p>
+        <p
+          class="shadow"
+          style="color: orange; text-align: center; font-size: 25px"
+        >
+          โปรดเลือกวัตถุดิบ
+        </p>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <div class="button-area filters">
+        <p style="color: rgb(32, 31, 29); font-size: 20px">เนื้อสัตว์</p>
+        <label class="button">
+          <input type="checkbox" value="ปลาแซลมอน" />ปลาแซลมอน
+        </label>
+        <label class="button">
+          <input type="checkbox" value="เนื้อไก่" />เนื้อไก่
+        </label>
+        <label class="button">
+          <input type="checkbox" value="เนื้อหมู" />เนื้อหมู
+        </label>
+
+        <br />
+        <p style="color: rgb(32, 31, 29); font-size: 20px">เครื่องปรุง</p>
+        <label class="button">
+          <input type="checkbox" value="พริกไทยดำ" />พริกไทยดำ
+        </label>
+        <label class="button">
+          <input type="checkbox" value="พริกไทย" />พริกไทย
+        </label>
+        <label class="button">
+          <input type="checkbox" value="เกลือ" />เกลือ
+        </label>
+        <label class="button">
+          <input type="checkbox" value="ซอสขาว" />ซอสขาว
+        </label>
+        <label class="button">
+          <input type="checkbox" value="น้ำมันมะกอก" />น้ำมันมะกอก
+        </label>
+        <label class="button">
+          <input type="checkbox" value="ซอสมะเขือเทศ" />ซอสมะเขือเทศ
+        </label>
+        <label class="button">
+          <input type="checkbox" value="ซอสพริก" />ซอสพริก
+        </label>
+        <label class="button">
+          <input type="checkbox" value="น้ำตาลทราย" />น้ำตาลทราย
+        </label>
+        <label class="button">
+          <input type="checkbox" value="ซุปก้อน" />ซุปก้อน
+        </label>
+
+        <br />
+        <p style="color: rgb(32, 31, 29); font-size: 20px">ส่วนผสม</p>
+        <label class="button">
+          <input type="checkbox" value="​ผงออริกาโน" />​ผงออริกาโน
+        </label>
+        <label class="button">
+          <input type="checkbox" value="​มอสซาเรลล่าชีส" />​มอสซาเรลล่าชีส
+        </label>
+        <label class="button">
+          <input type="checkbox" value="​ใบเบย์ลีฟ" />ใบเบย์ลีฟ
+        </label>
+        <label class="button">
+          <input type="checkbox" value="โฮลเกรนมัสตาร์ด" />โฮลเกรนมัสตาร์ด
+        </label>
+        <label class="button"> 
+          <input type="checkbox" value="เนย" />เนย 
+        </label>
+        <label class="button">
+          <input type="checkbox" value="เนยจืด" />เนยจืด
+        </label>
+        <label class="button">
+          <input type="checkbox" value="นมสด" />นมสด
+        </label>
+        <label class="button">
+          <input type="checkbox" value="แป้งมันสำปะหลัง" />แป้งมันสำปะหลัง
+        </label>
+        <label class="button">
+          <input type="checkbox" value="ชีสขูด" />ชีสขูด
+        </label>
+        <label class="button">
+          <input type="checkbox" value="เชดดาร์ชีส" />เชดดาร์ชีส
+        </label>
+        <label class="button">
+          <input type="checkbox" value="น้ำผึ้ง" />น้ำผึ้ง
+        </label>
+        <label class="button">
+          <input type="checkbox" value="แป้งสาลีอเนกประสงค์"/>แป้งสาลีอเนกประสงค์
+        </label>
+        <label class="button">
+          <input type="checkbox" value="น้ำซุปปลา" />น้ำซุปปลา
+        </label>
+        <label class="button">
+          <input type="checkbox" value="ขนมปังครัวซอง" />ขนมปังครัวซอง
+        </label>
+        <label class="button"> <input type="checkbox" value="แฮม" />แฮม </label>
+        <label class="button">
+          <input type="checkbox" value="ไข่ไก่" />ไข่ไก่
+        </label>
+        <label class="button">
+          <input type="checkbox" value="เบคอนทอด" />เบคอนทอด
+        </label>
+        <label class="button">
+          <input type="checkbox" value="พาร์สลีย์" />พาร์สลีย์
+        </label>
+
+        <br />
+        <p style="color: rgb(32, 31, 29); font-size: 20px">ผัก-ผลไม้</p>
+        <label class="button">
+          <input type="checkbox" value="เลมอน" />เลมอน
+        </label>
+        <label class="button">
+          <input type="checkbox" value="มันฝรั่ง" />มันฝรั่ง
+        </label>
+        <label class="button">
+          <input type="checkbox" value="มันบด" />มันบด
+        </label>
+        <label class="button">
+          <input type="checkbox" value="บรอกโคลี" />บรอกโคลี
+        </label>
+        <label class="button">
+          <input type="checkbox" value="ผักโขม" />ผักโขม
+        </label>
+        <label class="button">
+          <input type="checkbox" value="หอมหัวใหญ่" />หอมหัวใหญ่
+        </label>
+        <label class="button">
+          <input type="checkbox" value="กระเทียม" />กระเทียม
+        </label>
+        <label class="button">
+          <input type="checkbox" value="มันฝรั่ง" />มันฝรั่ง
+        </label>
+        <label class="button">
+          <input type="checkbox" value="ถั่วเข็ม" />ถั่วเข็ม
+        </label>
+        <label class="button">
+          <input type="checkbox" value="โรสแมรี่" />โรสแมรี่
+        </label>
+        <label class="button">
+          <input type="checkbox" value="ใบไทม์" />ใบไทม์
+        </label>
+        <label class="button">
+          <input type="checkbox" value="มะเขือเทศ" />มะเขือเทศ
+        </label>
+        <label class="button">
+          <input type="checkbox" value="ผักกาดหอม" />ผักกาดหอม
+        </label>
+        <label class="button">
+          <input type="checkbox" value="แครอท" />แครอท
+        </label>
+      </div>
+      <br />
+      <hr />
+      <br />
+
+      <div class="menudiv">
+        <div class="wrapper1" id="mnsry_container">
+          <div
+            class="card item ปลาแซลมอน พริกไทยดำ เกลือ เนย เลมอน ซอสขาว มันบด บรอกโคลี"
+          >
+            <img src="images/w_menu/w_สเต๊กปลาแซลมอน_2.jpg" alt="" />
+            <div class="content">
+              <div class="row">
+                <div class="details">
+                  <span>สเต๊กปลาแซลมอน</span>
+                </div>
+                <div class="default"></div>
+                <div class="buttons">
+                  <button onclick="window.location.href='w_salmonsteak'">
+                    ดูเพิ่มเติม
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card item ผักโขม หอมหัวใหญ่ กระเทียม เนย นมสด เกลือ แป้งมันสำปะหลัง ชีสขูด"
+          >
+            <img src="images/w_menu/w_ผักโขมอบชีส_1.jpg" alt="" />
+            <div class="content">
+              <div class="row">
+                <div class="details">
+                  <span>ผักโขมอบชีส</span>
+                </div>
+                <div class="default"></div>
+                <div class="buttons">
+                  <button onclick="window.location.href='w_bakedspinachcheese'">
+                    ดูเพิ่มเติม
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card item เนื้อไก่ มันฝรั่ง น้ำมันมะกอก น้ำผึ้ง โฮลเกรนมัสตาร์ด ถั่วเข็ม กระเทียม เนยจืด เลมอน โรสแมรี่ เกลือ พริกไทย"
+          >
+            <img src="images/w_menu/w_ไก่อบน้ำผึ้งมัสตาร์ด_1.jpg" alt="" />
+            <div class="content">
+              <div class="row">
+                <div class="details">
+                  <span>ไก่อบน้ำผึ้งมัสตาร์ด</span>
+                </div>
+                <div class="default"></div>
+                <div class="buttons">
+                  <button
+                    onclick="window.location.href='w_honeymustardchicken'"
+                  >
+                    ดูเพิ่มเติม
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card item เส้นพาสต้า ปลาแซลมอน หอมหัวใหญ่ ใบไทม์ แป้งสาลีอเนกประสงค์ เนย นมสด น้ำซุปปลา เกลือ พริกไทย"
+          >
+            <img src="images/w_menu/w_พาสต้าครีมแซลมอน_1.jpg" alt="" />
+            <!--ใส่ที่อยู่ไฟล์รูปอาหาร-->
+            <div class="content">
+              <div class="row">
+                <div class="details">
+                  <span>พาสต้าครีมแซลมอน</span>
+                </div>
+                <div class="default"></div>
+                <div class="buttons">
+                  <button onclick="window.location.href='w_salmoncreampasta'">
+                    ดูเพิ่มเติม
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card item ขนมปังครัวซอง แฮม เชดดาร์ชีส มะเขือเทศ ผักกาดหอม ซอสมะเขือเทศ"
+          >
+            <img src="images/w_menu/w_ครัวซองแฮมชีส_1.jpg" alt="" />
+            <div class="content">
+              <div class="row">
+                <div class="details">
+                  <span>ครัวซองแฮมชีส</span>
+                </div>
+                <div class="default"></div>
+                <div class="buttons">
+                  <button onclick="window.location.href='w_hamcheesecroissant'">
+                    ดูเพิ่มเติม
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card item มันฝรั่ง เนยจืด เกลือ พริกไทย เบคอนทอด มอสซาเรลล่าชีส พาร์สลีย์"
+          >
+            <img src="images/w_menu/w_มันบด_1.png" alt="" />
+            <div class="content">
+              <div class="row">
+                <div class="details">
+                  <span>มันบดอบชีสเบคอน</span>
+                </div>
+                <div class="default"></div>
+                <div class="buttons">
+                  <button onclick="window.location.href='w_mashedpotatowithcheeseandbacon2'">
+                    ดูเพิ่มเติม
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- โค้ดตรงนี้จำเป็นในfilltherมากห้ามย้ายเด็ดขาด -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/desandro/masonry/master/dist/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.rawgit.com/digistate/resouces/master/multipleFilterMasonry.js"></script>
+
+    <script>
+      var mContainer = $("#mnsry_container"),
+        filterButton = $(".button");
+      params = {
+        itemSelector: ".item",
+        filtersGroupSelector: ".filters",
+      };
+
+      $(window).load(function () {
+        // Do mansonry with filtering
+        mContainer.multipleFilterMasonry(params);
+
+        // Show articles with fadein
+        mContainer.find(".item").animate({ opacity: 1 }, 1200);
+
+        // Change the filtering button(label) status
+        filterButton.find("input").change(function () {
+          $(this).parent().toggleClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
